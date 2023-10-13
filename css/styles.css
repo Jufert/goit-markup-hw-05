@@ -569,6 +569,7 @@ header {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
+  border-radius: 4px;
 }
 
 .close_button {
@@ -578,6 +579,7 @@ header {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -593,15 +595,11 @@ header {
 .close_button:focus {
   border: none;
   background-color: #404bbf;
+  fill: #ffffff;
 }
 
 .icon_close {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon_close:hover,
-.icon_close:focus {
-  fill: #ffffff;
 }
 
 .form_p {
@@ -641,7 +639,7 @@ header {
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form_input:focus {
+.form_input:focus-within + .icon_svg {
   border-color: #4d5ae5;
 }
 .icon_svg {
@@ -651,13 +649,16 @@ header {
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon_svg:focus {
-  fill: #4d5ae5;
-}
+
 .form_label_textarea {
-  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
 }
-.form_textare {
+.form_textarea {
   width: 100%;
   height: 120px;
   font-size: 12px;
