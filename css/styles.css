@@ -658,8 +658,10 @@ header {
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 4px;  
+  position: relative;
 }
+
 .form_textarea {
   width: 100%;
   height: 120px;
