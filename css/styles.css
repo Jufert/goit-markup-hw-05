@@ -639,7 +639,7 @@ header {
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form_input:focus-within + .icon_svg {
+.form_input:focus {
   border-color: #4d5ae5;
 }
 .icon_svg {
@@ -649,7 +649,9 @@ header {
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.icon_svg {
+  fill: #4d5ae5;
+}
 .form_label_textarea {
   font-size: 12px;
   line-height: 1.17;
@@ -677,8 +679,13 @@ header {
 .form_textarea:focus {
   border-color: #4d5ae5;
 }
-
-.checkbox_input:checked {
+.form_comment {
+  margin-bottom: 16px;
+}
+.checkbox_container {
+  margin-bottom: 24px;
+}
+.checkbox_input:checked + .checkbox_text > .checkbox_span {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
@@ -688,6 +695,7 @@ header {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  color: #8e8f99;
 }
 .checkbox_span {
   width: 16px;
@@ -722,6 +730,7 @@ header {
   line-height: 1.5;
   color: #ffffff;
   cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #4d5ae5;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
